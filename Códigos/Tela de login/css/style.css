@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    padding: 0;
 }
 
 .div_geral{
@@ -10,40 +11,77 @@
     background-color: #EDECEC;
     margin: 0;
 }
-.div_inputs{
-    height: 100%;
-    width: 50%;
+
+.div_imagem{
+    height: 100vh;
+    width: 50vw;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 
-.div_imagem{
-    height: 100%;
-    width: 100%;
+.lado-direito{
+    height: 100vh;
+    width: 50vw;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .logo_imagem{
-    height: 85vh;
-    width: 100vw;
     display: flex;
-    align-items: initial;
-    justify-content: flex-end;
-    margin: 87px 0px 0px 0px;
+    align-items:center;
+    justify-content: center;
 }
-
-.pipoca{
-    height: 120px;
-    justify-content: flex-end;
+  
+.pipoca {
+    height: 110px;
 }
-
 
 
 .homem_filme{
     height: 400px;
+}
+.div_inputs{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.input_self{
+    display: flex;
+    flex-direction: column;
+}
+
+.input_self label {
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #242424;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.input_self input {
+    height: 30px;
+    width: 300px;
+    border-radius: 8px;
+    border-color: #dddddd;
+    background-color: #ffffff;
+}
+
+.div_botao{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.botao_entrar{
+    height: 30px;
+    width: 150px;
+    font-size: 15px;
+    color: #ffffff;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #4F4E63;
+    border-radius: 5px;
+    border-color: #4F4E63;
 }
