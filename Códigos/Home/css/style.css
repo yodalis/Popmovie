@@ -3,14 +3,19 @@
     padding: 0;
 }
 
+body{
+    display: flex;
+    flex-direction: row;
+}
+
 .vertical-menu{
     height: 100vh;
-    width: 120px;
+    width: 10vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    background-color: #232323;
+    justify-content: space-between;
+    background-color: #3A3A3A;
     
 }
 
@@ -44,3 +49,9 @@
     
 }
 
+.father-content{
+    height: 100vh;
+    width: 90vw;
+    background-color: #232323;
+ 
+}
