@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de login</title>
+    <link rel="stylesheet" href="../css/styleLogin.css">
+</head>
+<body>
+    <section class="div_geral">  
+        <div class="div_imagem">
+            <img class="homem_filme" src="../assets img/" alt="Imagem homem assistindo filme">
+        </div>
+
+        <div class="lado_direito">
+            <div class="centro">
+                <div class="logo_imagem">
+                     <img class="pipoca" src="../assets img/logo.png" alt="Logo">
+                </div>
+                
+                <form class="div_inputs" onsubmit="validar_info(event)">
+                    <div class="input_self">
+                        <label for="input_email">EMAIL</label> 
+                        <input id="input_email" type="email" placeholder="Digite aqui seu email">
+                    </div>
+                    
+                    <div class="input_self">
+                        <label for="input_senha">
+                        SENHA
+                        </label>
+                        <input id="input_senha" type="password" placeholder="Digite aqui sua senha">
+                    </div>
+
+                    <div class="div_botao">
+                        <button class="botao_entrar">
+                            ENTRAR
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+<script src="../js/configLogin.js"> </script>
