@@ -8,7 +8,7 @@ body{
     flex-direction: row;
 }
 
-.vertical-menu{
+.vertical_menu{
     height: 100vh;
     width: 10vw;
     display: flex;
@@ -19,12 +19,12 @@ body{
     
 }
 
-.icone-pipoca{
+.icone_pipoca{
     height: 70px;
     width: 70px;
 }
 
-.part-one{
+.part_one{
     height: 50vh;
     flex-direction: column;
     display: flex;
@@ -34,7 +34,7 @@ body{
     padding: 0;
 }
 
-.part-two{
+.part_two{
     height: 25vh;
     flex-direction: column;
     display: flex;
@@ -49,9 +49,21 @@ body{
     
 }
 
-.father-content{
+.father_content{
     height: 100vh;
     width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #232323;
  
+}
+
+.father_content select{
+    height: 30px;
+    width: 200px;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 }

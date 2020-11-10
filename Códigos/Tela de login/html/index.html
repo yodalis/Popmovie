@@ -7,38 +7,49 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <div class="div_geral">
+    <section class="div_geral">  
         <div class="div_imagem">
             <img class="homem_filme" src="../imgs/homem vendo film 1.png" alt="Imagem homem assistindo filme">
         </div>
 
-        <div class="lado-direito">
+        <div class="lado_direito">
             <div class="centro">
-                    <div class="logo_imagem">
-                        <img class="pipoca" src="../imgs/Logo.png" alt="Logo">
-                    </div>
-                <div class="div_inputs">
-                    
+                <div class="logo_imagem">
+                     <img class="pipoca" src="../imgs/Logo.png" alt="Logo">
+                </div>
+                
+                <form class="div_inputs" onsubmit="validar_info(event)">
                     <div class="input_self">
                         <label for="input_email">EMAIL</label> 
-                        <input id="input_email" type="text">
+                        <input id="input_email" type="email">
                     </div>
                     
                     <div class="input_self">
-                       <label for="input_senha">
+                        <label for="input_senha">
                         SENHA
-                       </label>
-                        <input id="input_senha" type="text">
+                        </label>
+                        <input id="input_senha" type="password">
                     </div>
-                <div class="div_botao">
-                    <button class="botao_entrar">
-                        ENTRAR
-                    </button>
-                </div>
-                </div>
+
+                    <div class="div_botao">
+                        <button class="botao_entrar">
+                            ENTRAR
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
-    </div>
+    </section>
 
 </body>
 </html>
+<script>
+    function validar_info(event) {
+        event.preventDefault();
+        if(input_email.value == 'admin@admin' && input_senha.value == 'admin'){
+            location.href = '../../Home/html/index.html'
+        } else{
+        alert ('Email e/ou senha incorretos!')
+    }
+    } 
+</script>
