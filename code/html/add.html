@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Filme</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets img/favicon-16x16.png">
+</head>
+<body>
+    <aside id="menuVertical">
+        <div class="vertical_menu">
+            <div class="part_one">
+                <a href="index.html"><img src="../assets img/logo.png" alt="Logo" class="icone_pipoca"></a>
+                <a href="index.html"><img src="../assets img/icon home.png" alt="Home" class="icones"></a>
+                <a href="add.html"><img src="../assets img/icon add.png" alt="Add filme" class="icones"></a>
+            </div>
+            <div class="part_two">
+                <a href="config.html"><img src="../assets img/icon config.png" alt="Configurações" class="icones"></a>
+                <a href="../html/login.html"><img src="../assets img/Icone log out.png" alt="Sair" class="icones"></a>
+            </div>
+        </div>
+    </aside>
+
+    <section class="general">
+        <form class="data_movie" action="">
+            <div class="in">
+                <label for="title">Título do filme</label> 
+                <input id="title" type="text">
+            </div>
+
+            <div class="row">
+                <div class="in_year in">
+                    <label for="genre">Gênero</label> 
+                    <input id="genre" type="text" required>
+                </div>
+                <div class="in_year in">
+                    <label for="year">Ano</label> 
+                    <input type="number" min="1920" max="2020" step="1" value="2020" required class="in_year">
+                </div>
+            </div>
+
+            <div class="in">
+                <label for="actor"> Atores/Atrizes</label>
+                <input id="actor" type="text" required>
+            </div>
+            
+            <div class="inSynopsis">
+                <label for="synopsis"> Sinopse </label>
+                <input id="synopsis" type="text" required>
+            </div>
+            
+            <button class="validate"> Cadastrar filme </button>
+        </form>
+
+        <div class="photo">
+            <img src="../assets img/girls.png" alt="Meninas vendo filme" class="girls">
+        </div>
+    </section>
+</body>
+</html>
