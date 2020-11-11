@@ -157,6 +157,7 @@ button{
     align-items: center;
     justify-content: center;
     color: white;
+    
 /* Propriedades para conseguir arredondar a borda com um gradiente */
     border: double 0.2em transparent;
     border-radius: 7px;

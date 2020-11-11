@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../css/styleCadastro.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets img/favicon-16x16.png">
+
+</head>
+<body>
+    <section class="generalFront">
+
+        <div class="registerPhoto">
+            <img class="popcornGlass" src="../assets img/fotoCadastro.png" alt="Pipoca, óculos e refrigerante">
+        </div>
+        
+        
+        <div class="leftSide">
+
+            <form action="" class="data_register" onsubmit="validarCadastro(event)">
+                <div class="in">
+                    <label for="input_nome">NOME</label>
+                    <input id="input_nome" type="text" required>
+                </div>
+                
+                <div class="in">
+                    <label for="input_email">EMAIL</label>
+                    <input id="input_email" type="email" required>
+                </div>
+                
+                <div class="in">
+                    <label for="input_senha">SENHA</label>
+                    <input id="input_senha" type="password" required>
+                </div>
+
+                <div class="in">
+                    <label for="input_Csenha">CONFIRMAR SENHA</label>
+                    <input id="input_Csenha" type="password" required>
+                </div>
+                
+                <div class="div_botao">
+                    <button>
+                        <a href="../html/login.html"></a>
+                        Cadastrar
+                    </button>
+                </div>
+                
+            </form>
+        </div>
+    </section>
+    </body>
+</html>
+<script src="../js/configLogin.js"> </script>

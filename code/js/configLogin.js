@@ -5,4 +5,13 @@ function validar_info(event) {
     } else{
     alert ('Email e/ou senha incorretos!')
 }
-} 
+}
+
+function validarCadastro(event) {
+    event.preventDefault();
+    if(input_nome.value == 'Thais Calazans' && input_email.value == 'thais@gmail.com' && input_senha.value =='thais' && input_Csenha.value == 'thais'){
+        location.href = '../html/login.html'
+    } else{
+    alert ('Complete o cadastro!')
+}   
+}
