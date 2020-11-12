@@ -6,6 +6,8 @@
     <title>Tela de login</title>
     <link rel="stylesheet" href="../css/styleLogin.css">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets img/favicon-16x16.png">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 <body>
     <section class="div_geral">  
@@ -32,14 +34,20 @@
                         <input id="input_senha" type="password" placeholder="Digite aqui sua senha">
                     </div>
 
-                    <div class="div_botao">
-                        <button class="botao_entrar">
+                    <div class="div_botao"> 
+                        <button type="button" onclick="location.href = '../html/cadastro.html'" class="botao_entrar">
+                            Cadastre-se
+                        </button>
+
+                        <button type="submit" class="botao_entrar">
                             ENTRAR
                         </button>
                     </div>
 
-                    <div class="message">
-                       Ainda não tem conta?  <a href="../html/cadastro.html"> Registre-se aqui!</a>
+                    <div class="message" onclick="popup(event)">
+                        <a href="">
+                            Esqueci a senha
+                        </a>  
                     </div>
                 </form>
             </div>
@@ -48,4 +56,18 @@
 
 </body>
 </html>
+
 <script src="../js/configLogin.js"> </script>
+<script>
+    function popup(event) {
+        event.preventDefault()
+        swal({
+            text: 'Escreva aqui o email cadastrado',
+            content: "input",
+            button: {
+                text: "Enviar código",
+                closeModal: true,
+                        }
+                    })
+    }
+</script>

@@ -72,13 +72,13 @@
 
 .div_botao{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly;
 }
 
 
 .botao_entrar{
     height: 30px;
-    width: 150px;
+    width: 145px;
     font-size: 15px;
     color: #ffffff;
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

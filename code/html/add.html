@@ -6,6 +6,8 @@
     <title>Adicionar Filme</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets img/favicon-16x16.png">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 <body>
     <aside id="menuVertical">
@@ -26,7 +28,7 @@
         <form class="data_movie" action="">
             <div class="in">
                 <label for="title">Título do filme</label> 
-                <input id="title" type="text">
+                <input id="title" type="text" required>
             </div>
 
             <div class="row">
@@ -50,7 +52,7 @@
                 <input id="synopsis" type="text" required>
             </div>
             
-            <button class="validate"> Cadastrar filme </button>
+            <button class="validate" onclick="validar(event)"> Cadastrar filme </button>
         </form>
 
         <div class="photo">
@@ -59,3 +61,9 @@
     </section>
 </body>
 </html>
+<script>
+    function validar(event) {
+        event.preventDefault()
+        swal("Obrigada!", "Agora você ajudou outra pessoa a escolher o próximo filme!", "success");  
+    }
+</script>

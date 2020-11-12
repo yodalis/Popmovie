@@ -71,6 +71,7 @@ body{
                       linear-gradient(to right, #64E8F0, #FF4034);
     background-origin: border-box;
     background-clip: content-box, border-box;
+    cursor: pointer;
 }
 
 /* Personalização add filme */
@@ -102,12 +103,8 @@ body{
     background-color: #232323;
     color: white;
     /* Propriedades para conseguir arredondar a borda com um gradiente */
-    border: double 0.2em transparent;
     border-radius: 7px;
-    background-image: linear-gradient(#232323, #232323), 
-                      linear-gradient(to right, #64E8F0, #FF4034);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
+    border: #FF4034 3px solid;
 }
 
 .row{
@@ -123,12 +120,8 @@ body{
     color: white;
     
     /* Propriedades para conseguir arredondar a borda com um gradiente */
-    border: double 0.2em transparent;
     border-radius: 7px;
-    background-image: linear-gradient(#232323, #232323), 
-                      linear-gradient(to right, #64E8F0, #FF4034);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
+    border: #FF4034 3px solid;
 }
 
 
@@ -141,16 +134,13 @@ body{
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #232323;
     /* Propriedades para conseguir arredondar a borda com um gradiente */
-    border: double 0.2em transparent;
     border-radius: 7px;
-    background-image: linear-gradient(#232323, #232323), 
-                      linear-gradient(to right, #64E8F0, #FF4034);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
+    border: #FF4034 3px solid;
+   
 }
 
 
-button{
+.validate{
     height: 40px;
     width: 150px;
     display: flex;
@@ -210,6 +200,28 @@ button{
     justify-content: space-evenly;
 }
 
+.avatarMask{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 70px;
+    height: 120px;
+    width: 400px;
+    background-color: whitesmoke;
+}
+
+.imageMask{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.sizePhoto{
+    height: 85px;
+    border: #ea0000 solid 5px;
+    border-radius: 52px;
+    cursor: pointer;
+}
+
 .initial label{
     color: white;
     font-size: 30px;
@@ -239,4 +251,22 @@ button{
 
 .inModify label{
     color: white;
+    font-size: 18px;
+    }
+
+.modifyButton{
+    height: 40px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+/* Propriedades para conseguir arredondar a borda com um gradiente */
+    border: double 0.2em transparent;
+    border-radius: 7px;
+    background-image: linear-gradient(#4F4E63, #4F4E63), 
+                      linear-gradient(to right, #64E8F0, #FF4034);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
