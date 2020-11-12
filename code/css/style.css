@@ -179,3 +179,34 @@ button{
     height: 400px;
 }
 
+/* Personalização da tela profile*/
+
+.initial{
+    height: 100vh;
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #232323;
+}
+
+.tresdTails{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border: #64E8F0 2px double;
+    border-radius: 150px;
+}
+
+.imageTails{
+    height: 250px;
+}
+
+.initial label{
+    color: white;
+    font-size: 30px;
+}
