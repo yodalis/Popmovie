@@ -23,31 +23,34 @@
                 
                 <form class="div_inputs" onsubmit="validar_info(event)">
                     <div class="input_self">
-                        <label for="input_email">EMAIL</label> 
-                        <input id="input_email" type="email" placeholder="Digite aqui seu email">
+                        <label for="input_email">E-mail</label> 
+                        <input id="input_email" type="email" placeholder="Digite aqui seu email" required>
                     </div>
                     
                     <div class="input_self">
                         <label for="input_senha">
-                        SENHA
+                        Senha
                         </label>
-                        <input id="input_senha" type="password" placeholder="Digite aqui sua senha">
+                        <input id="input_senha" type="password" placeholder="Digite aqui sua senha" required>
                     </div>
 
                     <div class="div_botao"> 
-                        <button type="button" onclick="location.href = '../html/cadastro.html'" class="botao_entrar">
-                            Cadastre-se
+                        <button type="button" onclick="location.href = '../html/cadastro.html'" >
+                            CADASTRE-SE
                         </button>
 
-                        <button type="submit" class="botao_entrar">
+                        <button type="submit">
                             ENTRAR
                         </button>
                     </div>
 
                     <div class="message" onclick="popup(event)">
-                        <a href="">
-                            Esqueci a senha
-                        </a>  
+                        
+                           Você já esqueceu a sua senha né?
+                           <br> 
+                           <a href=""> <b>
+                            Então clica aqui!
+                           </b></a>  
                     </div>
                 </form>
             </div>
@@ -57,7 +60,7 @@
 </body>
 </html>
 
-<script src="../js/configLogin.js"> </script>
+<script src="../js/configLogin.js"></script>
 <script>
     function popup(event) {
         event.preventDefault()

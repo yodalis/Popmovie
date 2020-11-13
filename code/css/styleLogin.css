@@ -59,9 +59,10 @@
     color: #242424;
     font-size: 18px;
     font-weight: normal;
+    cursor: pointer;
 }
 
-.input_self input {
+.input_self input{
     height: 30px;
     width: 300px;
     border-radius: 8px;
@@ -76,7 +77,7 @@
 }
 
 
-.botao_entrar{
+.div_botao button{
     height: 30px;
     width: 145px;
     font-size: 15px;
@@ -86,11 +87,12 @@
     border-radius: 5px;
     border-style: solid;
     border-color: #73677e;
+    cursor: pointer;
 }
 
 .message{
     color: #242424;
-    text-align: end;
+    text-align: right;
     height: 20px;
-    width: 300px;
+    width: 310px;
 }

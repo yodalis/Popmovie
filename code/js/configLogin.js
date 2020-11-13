@@ -9,7 +9,7 @@ function validar_info(event) {
 
 function validarCadastro(event) {
     event.preventDefault();
-    if(input_nome.value == 'Thais Calazans' && input_email.value == 'thais@gmail.com' && input_senha.value =='thais' && input_Csenha.value == 'thais'){
+    if(input_nome.value != '' && input_email.value != '' && input_senha.value !='' && input_Csenha.value != ''){
         location.href = '../html/login.html'
     } else{
     alert ('Complete o cadastro!')
