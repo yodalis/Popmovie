@@ -57,7 +57,7 @@ body{
     width: 90vw;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-evenly;
     background-color: #232323;
 }
@@ -71,7 +71,6 @@ body{
 
 .squareChoiceUp div{
     height: 210px;
-    width: 190px;
     border: double 0.2em transparent;
     border-radius: 7px;
     background-image: linear-gradient(#3A3944, #3A3944), 
@@ -123,13 +122,16 @@ body{
 
 .squareChoice div{
     height: 210px;
-    width: 190px;
     border: double 0.2em transparent;
     border-radius: 7px;
     background-image: linear-gradient(#3A3944, #3A3944), 
                       linear-gradient(to right bottom, #FF4034, #64E8F0);
     background-origin: border-box;
     background-clip: content-box, border-box;
+}
+
+.picture{
+    height: 210px;
 }
 
 /* Personalização add filme */
