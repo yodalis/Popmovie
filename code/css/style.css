@@ -206,13 +206,30 @@ body{
 }
 
 .in input{
-    height: 25px;
+    height: 35px;
     width: 300px;
+    margin-top: 5px;
     display: flex;
     justify-content: center; 
     background-color: #232323;
     color: white;
-    /* Propriedades para conseguir arredondar a borda com um gradiente */
+    font-size: 15px;
+    border: double 0.2em transparent;
+    border-radius: 7px;
+    background-image: linear-gradient(#232323, #232323), 
+                      linear-gradient(to right, #64E8F0, #FF4034);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.genreSelect{
+    height: 35px;
+    display: flex;
+    justify-content: center; 
+    margin: 5px 0px 0px 0px;
+    background-color: #232323;
+    color: white;
+    font-size: 15px;
     border: double 0.2em transparent;
     border-radius: 7px;
     background-image: linear-gradient(#232323, #232323), 
@@ -228,12 +245,11 @@ body{
 }
 
 .in_year input{
-    height: 25px;
+    height: 32px;
     width: 120px;
     background-color: #232323;
     color: white;
-    
-    /* Propriedades para conseguir arredondar a borda com um gradiente */
+    font-size: 15px;
     border: double 0.2em transparent;
     border-radius: 7px;
     background-image: linear-gradient(#232323, #232323), 
@@ -243,22 +259,22 @@ body{
 }
 
 
-.inSynopsis input{
+.inSynopsis textarea{
     height: 150px;
     width: 300px;
+    margin-top: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #232323;
-    /* Propriedades para conseguir arredondar a borda com um gradiente */
+    font-size: 15px;
+    color: white;
     border: double 0.2em transparent;
     border-radius: 7px;
     background-image: linear-gradient(#232323, #232323), 
                       linear-gradient(to right, #64E8F0, #FF4034);
     background-origin: border-box;
     background-clip: content-box, border-box;
-   
 }
 
 
@@ -269,8 +285,8 @@ body{
     align-items: center;
     justify-content: center;
     color: white;
-    
-/* Propriedades para conseguir arredondar a borda com um gradiente */
+    font-weight: 500;
+    text-transform: uppercase;    
     border: double 0.2em transparent;
     border-radius: 7px;
     background-image: linear-gradient(#4F4E63, #4F4E63), 
@@ -312,8 +328,6 @@ body{
     height: 200px;
     width: 200px;
     margin: 0px 0px 30px 0px;
-   
-    
 }
 
 .imageTails{
@@ -383,8 +397,6 @@ body{
     align-items: center;
     justify-content: center;
     color: white;
-    
-/* Propriedades para conseguir arredondar a borda com um gradiente */
     border: double 0.2em transparent;
     border-radius: 7px;
     background-image: linear-gradient(#4F4E63, #4F4E63), 

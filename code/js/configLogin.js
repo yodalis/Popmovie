@@ -15,3 +15,8 @@ function validarCadastro(event) {
     alert ('Complete o cadastro!')
 }   
 }
+
+function validarAdd(event) {
+    event.preventDefault()
+    swal("Filme registrado!", "Obrigada pela sua indicação!", "success");  
+}
