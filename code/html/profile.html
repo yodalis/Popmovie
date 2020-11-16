@@ -25,15 +25,15 @@
     <section class="content">
         <div class="initial">
             <div class="tresdTails">
-                <img src="../assets img/avatarThais.png" alt="" class="imageTails">
+                <img id="imagemPerfil" alt="" class="imageTails">
             </div>
             <label for="" class="">Thaís Calazans</label> 
 
             <div class="avatarMask">
                 <div class="imageMask">
-                    <img src="../assets img/avatarThais.png" alt="Avatar com mascara"   class="sizePhoto">
-                    <img src="../assets img/AvatarPreta.png" alt="Avatar com mascara 2" class="sizePhoto">
-                    <img src="../assets img/Avatar Isa.png"  alt="Avatar com mascara 3" class= "sizePhoto">
+                    <img src="../assets img/avatarThais.png" onclick="alterarFoto('Thais')" alt="Avatar com mascara"   class="sizePhoto">
+                    <img src="../assets img/avatarLaura.png" onclick="alterarFoto('Laura')" alt="Avatar com mascara 2" class="sizePhoto">
+                    <img src="../assets img/avatarIsa.png"  onclick="alterarFoto('Isa')"  alt="Avatar com mascara 3" class= "sizePhoto">
                 </div>
             </div>
         </div>
@@ -61,3 +61,11 @@
     </section>
 </body>
 </html>
+<script>
+    
+    imagemPerfil.src = `../assets img/avatarThais.png`
+
+    function alterarFoto(nomeFoto) {
+        imagemPerfil.src = `../assets img/avatar${nomeFoto}.png`
+    }
+</script>

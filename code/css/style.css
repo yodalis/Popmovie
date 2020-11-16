@@ -51,9 +51,10 @@ body{
     width: 40px;
     
 }
+/* Personalização da home */
 
 .fatherContentUp{
-    height: 50vh;
+    height: 40vh;
     width: 90vw;
     display: flex;
     flex-direction: column;
@@ -78,13 +79,56 @@ body{
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
-.all_selects{
-    width: 650px;
-    display: flex;
-    justify-content: space-around;
+
+.movie {
+    position: relative;
+    cursor: pointer;
 }
 
-.fatherContentUp select{
+.movie:hover .blurred {
+    opacity: 0.9;
+}
+
+.blurred {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.avaliacaoText{
+    color: white;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+.avaliacaoValue{
+    color: white;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.all_selects{
+    height: 20vh;
+    width: 90vw;
+    background-color: #232323;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.all_selects select{
     height: 55px;
     width: 200px;
     /* Propriedades para conseguir arredondar a borda com um gradiente */
@@ -100,12 +144,12 @@ body{
     text-align-last: center;
 }
 
-.father_content option{
+.all_selects option{
     background-color: #3A3A3A;
 }
 
 .fatherContentDown{
-    height: 50vh;
+    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,6 +176,12 @@ body{
 
 .picture{
     height: 210px;
+    cursor: pointer;
+}
+
+.movieaDay:hover{
+    height: 210px;
+    background-color: #3A3A3A;
 }
 
 /* Personalização add filme */
@@ -163,8 +213,12 @@ body{
     background-color: #232323;
     color: white;
     /* Propriedades para conseguir arredondar a borda com um gradiente */
+    border: double 0.2em transparent;
     border-radius: 7px;
-    border: #FF4034 3px solid;
+    background-image: linear-gradient(#232323, #232323), 
+                      linear-gradient(to right, #64E8F0, #FF4034);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 
 .row{
@@ -180,8 +234,12 @@ body{
     color: white;
     
     /* Propriedades para conseguir arredondar a borda com um gradiente */
+    border: double 0.2em transparent;
     border-radius: 7px;
-    border: #FF4034 3px solid;
+    background-image: linear-gradient(#232323, #232323), 
+                      linear-gradient(to right, #64E8F0, #FF4034);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 
 
@@ -194,8 +252,12 @@ body{
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #232323;
     /* Propriedades para conseguir arredondar a borda com um gradiente */
+    border: double 0.2em transparent;
     border-radius: 7px;
-    border: #FF4034 3px solid;
+    background-image: linear-gradient(#232323, #232323), 
+                      linear-gradient(to right, #64E8F0, #FF4034);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
    
 }
 
