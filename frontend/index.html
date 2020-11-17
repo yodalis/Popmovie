@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de login</title>
-    <link rel="stylesheet" href="../css/styleLogin.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets img/favicon-16x16.png">
+    <link rel="stylesheet" href="css/styleLogin.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
 <body>
     <section class="div_geral">  
         <div class="div_imagem">
-            <img class="homem_filme" src="../assets img/movie_man.png" alt="Imagem homem assistindo filme">
+            <img class="homem_filme" src="img/movie_man.png" alt="Imagem homem assistindo filme">
         </div>
 
         <div class="lado_direito">
             <div class="centro">
                 <div class="logo_imagem">
-                     <img class="pipoca" src="../assets img/logo_sn.png" alt="Logo">
+                     <img class="pipoca" src="img/logo_sn.png" alt="Logo">
                 </div>
                 
                 <form class="div_inputs" onsubmit="validar_info(event)">
@@ -35,7 +35,7 @@
                     </div>
 
                     <div class="div_botao"> 
-                        <button type="button" onclick="location.href = '../html/cadastro.html'" >
+                        <button type="button" onclick="location.href = 'cadastro.html'" >
                             CADASTRE-SE
                         </button>
 
@@ -60,17 +60,4 @@
 </body>
 </html>
 
-<script src="../js/configLogin.js"></script>
-<script>
-    function popup(event) {
-        event.preventDefault()
-        swal({
-            text: 'Escreva aqui o email cadastrado',
-            content: "input",
-            button: {
-                text: "Enviar código",
-                closeModal: true,
-                        }
-                    })
-    }
-</script>
+<script src="js/configLogin.js"></script>

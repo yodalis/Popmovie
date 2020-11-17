@@ -4,6 +4,7 @@
     outline: 0;
     box-sizing: border-box;
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition-timing-function: ease-out;
 }
 
 body{

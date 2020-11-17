@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: .5s ease;
 }
+
 
 body{
     display: flex;
@@ -83,6 +85,8 @@ body{
 .movie {
     position: relative;
     cursor: pointer;
+    animation: backInDown; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s; /* don't forget to set a duration! */
 }
 
 .movie:hover .blurred {
@@ -125,7 +129,7 @@ body{
     background-color: #232323;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-evenly;   
 }
 
 .all_selects select{
@@ -142,8 +146,13 @@ body{
     color: white;
     font-size: 15px;
     text-align-last: center;
+    
 }
-
+.allS_animation{
+    animation: bounceIn; 
+    animation-duration: 1s; 
+    animation-delay: 0.1s;
+}
 .all_selects option{
     background-color: #3A3A3A;
 }
@@ -177,7 +186,9 @@ body{
 .picture{
     height: 210px;
     cursor: pointer;
+    
 }
+
 
 .movieaDay:hover{
     height: 210px;
@@ -203,6 +214,9 @@ body{
     justify-content: space-evenly;
     flex-direction: column;
     color: white;
+    animation: backInUp ease-in-out;
+    animation-duration: 0.7s;
+    animation-delay: 0s;
 }
 
 .in input{
@@ -220,6 +234,7 @@ body{
                       linear-gradient(to right, #64E8F0, #FF4034);
     background-origin: border-box;
     background-clip: content-box, border-box;
+    
 }
 
 .genreSelect{
