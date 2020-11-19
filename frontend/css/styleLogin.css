@@ -88,6 +88,7 @@
     border-style: solid;
     border-color: #73677e;
     cursor: pointer;
+    font-weight: 500;
 }
 
 .message{

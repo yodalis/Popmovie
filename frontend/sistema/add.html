@@ -57,21 +57,27 @@
                     <input type="number" min="1920" max="2020" step="1" value="2020" required class="in_year">
                 </div>
             </div>
-
+            
+            <div class="in">
+                <label for="score"> Nota do filme (%) </label>
+                <input id="score" type="number" required>
+            </div>
+            
             <div class="in">
                 <label for="actor"> Atores/Atrizes</label>
                 <input id="actor" type="text" required>
             </div>
+
             
             <div class="inSynopsis">
                 <label for="synopsis"> Sinopse </label>
-                <textarea id="synopsis" required> </textarea>
+                <textarea id="synopsis"required></textarea>
             </div>
             
             <button class="validate"> Cadastrar filme </button>
         </form>
 
-        <div class="photo">
+        <div class="photo animate__animated animate__backInUp">
             <img src="img/girls.png" alt="Meninas vendo filme" class="girls">
         </div>
     </section>
