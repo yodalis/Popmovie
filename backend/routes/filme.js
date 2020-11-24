@@ -17,18 +17,13 @@ router.get('/', function (req,res){
 
 // o Post adiciona, aqui ele vai adicionar um novo filme naquela lista de filmes.
 router.post('/', function (req, res){
-    var idFilme = req.body.idFilme
-    var nomeFilme = req.body.nomeFilme
-    var anoFilme = req.body.anoFilme
-    var fkUsuario = req.body.fkUsuario
-    var sinopseFilme = req.body.sinopseFilme
-    var imgFilme = req.body.imgFilme
-    var avaliacaoFilme = req.body.avaliacaoFilme
-
-    let instrucaoSql = `insert into Filme values (${idFilme},'${nomeFilme}',${anoFilme}, ${fkUsuario}, '${sinopseFilme}', '${imgFilme}', ${avaliacaoFilme}) `;
-	sequelize.query(instrucaoSql, {
-		model: Filme
-	}).then(resultado => {
+    Filme.create({
+        nomeFilme: req.body.nomeFilme,
+        anoFilme: req.body.anoFilme,
+        fkUsuario: req.body.fkUsuario,
+        imgFilme: req.body.imgFilme,
+        avaliacaoFilme: req.body.avaliacaoFilme
+    }).then(resultado => {
         res.send(resultado);
     }).catch(erro => {
         res.status(500).send(erro.message);

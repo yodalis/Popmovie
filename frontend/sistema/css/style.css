@@ -284,24 +284,6 @@ body{
 }
 
 
-.inSynopsis textarea{
-    height: 150px;
-    width: 300px;
-    margin-top: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #232323;
-    font-size: 15px;
-    color: white;
-    border: double 0.2em transparent;
-    border-radius: 7px;
-    background-image: linear-gradient(#232323, #232323), 
-                      linear-gradient(to right, #64E8F0, #FF4034);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-}
-
 
 .validate{
     height: 40px;

@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
 			field: 'idFilme',
 			type: DataTypes.INTEGER,
 			primaryKey: true,
+			autoIncrement: true
 		},		
 		nomeFilme: {
 			field: 'nomeFilme',
@@ -29,11 +30,6 @@ module.exports = (sequelize, DataTypes) => {
 					model: 'Usuario',
 					key: 'idUsuario'
 				}
-        },
-        sinopseFilme: {
-            field: 'sinopseFilme',
-            type: DataTypes.STRING,
-            allowNull: false
         },
         imgFilme: {
             field: 'imgFilme',
