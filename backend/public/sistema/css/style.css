@@ -1,0 +1,419 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: .5s ease;
+}
+
+
+body{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Personalização index */
+
+.vertical_menu{
+    height: 100vh;
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3A3A3A;
+    
+}
+
+.icone_pipoca{
+    height: 70px;
+    width: 70px;
+}
+
+.part_one{
+    height: 50vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.part_two{
+    height: 25vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+}
+
+.icones{
+    height: 40px;
+    width: 40px;
+    
+}
+/* Personalização da home */
+
+.fatherContentUp{
+    height: 40vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #232323;
+}
+.squareChoiceUp{
+    height: 243px;
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.squareChoiceUp div{
+    height: 210px;
+    border: double 0.2em transparent;
+    border-radius: 7px;
+    background-image: linear-gradient(#3A3944, #3A3944), 
+                      linear-gradient(to right bottom, #FF4034, #64E8F0);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.movie {
+    position: relative;
+    cursor: pointer;
+    animation: backInDown; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s; /* don't forget to set a duration! */
+}
+
+.movie:hover .blurred {
+    opacity: 0.9;
+}
+
+.blurred {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.avaliacaoText{
+    color: white;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+.avaliacaoValue{
+    color: white;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.all_selects{
+    height: 20vh;
+    width: 90vw;
+    background-color: #232323;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;   
+}
+
+.all_selects select{
+    height: 55px;
+    width: 200px;
+    /* Propriedades para conseguir arredondar a borda com um gradiente */
+    border: double 0.2em transparent;
+    border-radius: 7px;
+    background-image: linear-gradient(#3A3944, #3A3944), 
+                      linear-gradient(to right bottom, #FF4034, #64E8F0);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    text-align-last: center;
+    
+}
+.allS_animation{
+    animation: bounceIn; 
+    animation-duration: 1s; 
+    animation-delay: 0.1s;
+}
+.all_selects option{
+    background-color: #3A3A3A;
+}
+
+.fatherContentDown{
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #232323;
+}
+
+.squareChoice{
+    height: 243px;
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.squareChoice div{
+    height: 210px;
+    border: double 0.2em transparent;
+    border-radius: 7px;
+    background-image: linear-gradient(#3A3944, #3A3944), 
+                      linear-gradient(to right bottom, #FF4034, #64E8F0);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.picture{
+    height: 210px;
+    cursor: pointer;
+    
+}
+
+
+.movieaDay:hover{
+    height: 210px;
+    background-color: #3A3A3A;
+}
+
+/* Personalização add filme */
+
+.general{
+    height: 100vh;
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #232323;
+}
+
+.data_movie{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    color: white;
+    animation: backInUp ease-in-out;
+    animation-duration: 0.7s;
+    animation-delay: 0s;
+}
+.in{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.in input{
+    height: 35px;
+    width: 300px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center; 
+    background-color: #232323;
+    color: white;
+    font-size: 15px;
+    border: double 0.2em transparent;
+    border-radius: 7px;
+    background-image: linear-gradient(#232323, #232323), 
+                      linear-gradient(to right, #64E8F0, #FF4034);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    
+}
+
+#score{
+    height: 35px;
+    width: 150px;
+}
+.genreSelect{
+    height: 35px;
+    display: flex;
+    justify-content: center; 
+    margin: 5px 12px 0px -5px;
+    background-color: #232323;
+    color: white;
+    font-size: 15px;
+    border: double 0.2em transparent;
+    border-radius: 7px;
+    background-image: linear-gradient(#232323, #232323), 
+                      linear-gradient(to right, #64E8F0, #FF4034);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.row{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.in_year input{
+    height: 32px;
+    width: 120px;
+    background-color: #232323;
+    color: white;
+    font-size: 15px;
+    border: double 0.2em transparent;
+    border-radius: 7px;
+    background-image: linear-gradient(#232323, #232323), 
+                      linear-gradient(to right, #64E8F0, #FF4034);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+
+
+.validate{
+    height: 40px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;    
+    border: double 0.2em transparent;
+    border-radius: 7px;
+    background-image: linear-gradient(#4F4E63, #4F4E63), 
+                      linear-gradient(to right, #64E8F0, #FF4034);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.photo{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    animation: backInUp ease-in-out;
+    animation-duration: 0.7s;
+    animation-delay: 0s;
+}
+
+.girls{
+    height: 400px;
+}
+
+/* Personalização da tela profile*/
+
+.content{
+    display: flex;
+    flex-direction: row;
+}
+
+.initial{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #232323;
+}
+
+.tresdTails{
+    height: 200px;
+    width: 200px;
+    margin: 0px 0px 30px 0px;
+}
+
+.imageTails{
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.avatarMask{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 70px;
+    height: 120px;
+    width: 400px;
+    background-color: whitesmoke;
+}
+
+.imageMask{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.sizePhoto{
+    height: 85px;
+    cursor: pointer;
+}
+
+.initial label{
+    color: white;
+    font-size: 30px;
+    margin: 0px 0px 30px 0px;
+}
+
+.dataModify{
+    height: 100vh;
+    width: 40vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #232323;
+}
+
+.inModify input{
+    height: 25px;
+    width: 300px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: #232323;
+    color: white;
+    border-radius: 7px;
+    border: #64E8F0 3px solid;
+    margin-top: 7px;
+}
+
+.inModify label{
+    color: white;
+    font-size: 18px;
+    
+    }
+
+.modifyButton{
+    height: 40px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: double 0.2em transparent;
+    border-radius: 7px;
+    background-image: linear-gradient(#4F4E63, #4F4E63), 
+                      linear-gradient(to right, #64E8F0, #FF4034);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    font-size:12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}

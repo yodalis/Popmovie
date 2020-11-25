@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Filme</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+<body>
+    <aside id="menuVertical">
+        <div class="vertical_menu">
+            <div class="part_one">
+                <a href="index.html"><img src="img/logo.png" alt="Logo" class="icone_pipoca"></a>
+                <a href="index.html"><img src="img/icon home.png" alt="Home" class="icones"></a>
+                <a href="add.html"><img src="img/icon add.png" alt="Add filme" class="icones"></a>
+            </div>
+            <div class="part_two">
+                <a href="profile.html"><img src="img/Profile.png" alt="Configurações" class="icones"></a>
+                <a href="../html/login.html"><img src="img/Icone log out.png" alt="Sair" class="icones"></a>
+            </div>
+        </div>
+    </aside>
+
+    <section class="general">
+        <form class="data_movie animate__animated animate__backInUp" onsubmit="validarAdd(event)">
+            <div class="in">
+                <label for="title">Título do filme</label> 
+                <input id="title" type="text" required>
+            </div>
+
+            <div class="row">
+                <div>
+                    <label for="genre">Gênero</label> 
+                    <select id="genre" class="genreSelect" required> 
+                        <option value="0">Escolha o gênero</option>
+                        <option value="1">Ação</option>
+                        <option value="2">Aventura</option>
+                        <option value="3">Comédia</option>
+                        <option value="4">Comédia Romântica</option>
+                        <option value="5">Documentário</option>
+                        <option value="6">Drama</option>
+                        <option value="7">Fantasia</option>
+                        <option value="8">Ficção Científica</option>
+                        <option value="9">Musical</option>
+                        <option value="10">Romance</option>
+                        <option value="11">Suspense</option>
+                        <option value="12">Terror</option>
+                    </select>
+                </div>
+
+                <div class="in_year in">
+                    <label for="year">Ano</label> 
+                    <input type="number" min="1920" max="2020" step="1" value="2020" required class="in_year">
+                </div>
+            </div>
+            
+            <div class="in">
+                <label for="score"> Nota do filme (%) </label>
+                <input id="score" type="number" required>
+            </div>
+            
+            <div class="in">
+                <label for="actor"> Atores/Atrizes</label>
+                <input id="actor" type="text" required>
+            </div>
+
+            
+            <div class="in">
+                <label for="addPhoto"> Adicione aqui a URL da imagem do Filme </label>
+                <input id="photo"required></textarea>
+            </div>
+            
+            <button class="validate"> Cadastrar filme </button>
+        </form>
+
+        <div class="photo animate__animated animate__backInUp">
+            <img src="img/girls.png" alt="Meninas vendo filme" class="girls">
+        </div>
+    </section>
+</body>
+</html>
+<script src="js/configAdd.js"></script>

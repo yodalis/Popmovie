@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Profile</title>
+</head>
+<body>
+    <aside id="menuVertical">
+        <div class="vertical_menu">
+            <div class="part_one">
+                <a href="index.html"><img src="img/logo.png" alt="Logo" class="icone_pipoca"></a>
+                <a href="index.html"><img src="img/icon home.png" alt="Home" class="icones"></a>
+                <a href="add.html"><img src="img/icon add.png" alt="Add filme" class="icones"></a>
+            </div>
+            <div class="part_two">
+                <a href="profile.html"><img src="img/Profile.png" alt="Configurações" class="icones"></a>
+                <a href="../index.html"><img src="img/Icone log out.png" alt="Sair" class="icones"></a>
+            </div>
+        </div>
+    </aside>
+
+    <section class="content">
+        <div class="initial">
+            <div class="tresdTails">
+                <img id="imagemPerfil" alt="" class="imageTails">
+            </div>
+            <label for="" class="">Thaís Calazans</label> 
+
+            <div class="avatarMask">
+                <div class="imageMask">
+                    <img src="img/avatarThais.png" onclick="alterarFoto('Thais')" alt="Avatar com mascara"   class="sizePhoto">
+                    <img src="img/avatarLaura.png" onclick="alterarFoto('Laura')" alt="Avatar com mascara 2" class="sizePhoto">
+                    <img src="img/avatarIsa.png"  onclick="alterarFoto('Isa')"  alt="Avatar com mascara 3" class= "sizePhoto">
+                </div>
+            </div>
+        </div>
+        
+        <form class="dataModify" onsubmit="validarProfile(event)">
+            <div class="inModify">
+                <label for="input_nome">Alterar nome</label>
+                <input id="input_nome" type="text" value="Thais Calazans">
+            </div>
+
+            <div class="inModify">
+                <label for="input_email">Alterar email</label>
+                <input id="input_email" type="email" value="thais@gmail.com">
+            </div>
+            
+            <div class="inModify">
+                <label for="input_senha">Alterar senha</label>
+                <input id="input_senha" type="password" value="thais">
+            </div>
+
+            <div class="inModify">
+                <label for="input_Csenha">Confirmar nova senha</label>
+                <input id="input_Csenha" type="password" value="thais">
+            </div>
+
+            <button type="submit" class="modifyButton">
+                Salvar alterações
+            </button>
+    </section>
+</body>
+</html>
+<script>
+    imagemPerfil.src = `img/avatarThais.png`
+
+    function alterarFoto(nomeFoto) {
+        imagemPerfil.src = `img/avatar${nomeFoto}.png`
+    }
+</script>
+
+<script src="/sistema/js/configProfile.js"></script>

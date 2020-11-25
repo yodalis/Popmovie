@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/styleCadastro.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <section class="generalFront">
+        <div class="registerPhoto">
+            <img class="popcornGlass" src="img/fotoCadastro.png" alt="Pipoca, óculos e refrigerante">
+        </div>
+        
+        
+        <div class="leftSide">
+
+            <form id="form_cadastro" class="data_register" onsubmit="return cadastro()">
+                <div class="in">
+                    <label for="input_nome">Nome</label>
+                    <input id="input_nome" type="text" name="nome" required>
+                </div>
+                
+                <div class="in">
+                    <label for="input_email">Email</label>
+                    <input id="input_email" type="email" name="email" required>
+                </div>
+                
+                <div class="in">
+                    <label for="input_senha">Senha</label>
+                    <input id="input_senha" type="password" name="senha" required>
+                </div>
+
+                <div class="in">
+                    <label for="input_Csenha">Confirmar senha</label>
+                    <input id="input_Csenha" type="password" name="Csenha" required>
+                </div>
+                
+                <div class="div_botao">
+                    <div class="arrow">
+                        <a href="index.html">
+                            <img src="img/Arrow - Left Circle.png" alt="Flecha" class="arrowOnly">
+                        </a>
+                    </div>
+
+                    <button type="submit">
+                        <a href="index.html"></a>
+                        Cadastrar
+                    </button>
+                </div>
+                
+            </form>
+        </div>
+    </section>
+    </body>
+</html>
+<script src="js/configCadastro.js"></script>

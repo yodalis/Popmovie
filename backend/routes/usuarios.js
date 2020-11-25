@@ -21,7 +21,7 @@ router.post('/autenticar', function(req, res, next) {
 		console.log(`Encontrados: ${resultado.length}`); 
 
 		if (resultado.length == 1) {
-			sessoes.push(resultado[0].dataValues.login);
+			sessoes.push(resultado[0].dataValues.email);
 			console.log('sessoes: ',sessoes);
 			res.json(resultado[0]);
 		} else if (resultado.length == 0) {
@@ -75,7 +75,7 @@ router.get('/sessao/:login', function(req, res, next) {
 	
 	let tem_sessao = false;
 	for (let u=0; u<sessoes.length; u++) {
-		if (sessoes[u] == login) {
+		if (sessoes[u] == email) {
 			tem_sessao = true;
 			break;
 		}
