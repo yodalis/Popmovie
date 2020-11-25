@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
 		icone:{
 			field: 'icone',
 			type: DataTypes.STRING,
-			allowNull: false
+			allowNull: true
 		}
 	}, 
 	{
