@@ -30,22 +30,23 @@
         <div class="fatherContentUp">
             <div id="movies" class="squareChoiceUp"></div>
         </div>
-        <form class="all_selects">
+        <form id="formSelecionar" class="all_selects" method="POST"  onchange="return indicacao()">
             <div id="">
-                    <select id="atores" class="allS_animation animate__animated animate__bounceIn">
+                    <select name="ator" id="atores" class="allS_animation animate__animated animate__bounceIn">
                         <option value="0">
                             Escolha ator/atriz
                         </option>
                     </select>
+
             </div>
                 
-            <select id="genre" class="allS_animation animate__animated animate__bounceIn">
+            <select name="genero" id="genre" class="allS_animation animate__animated animate__bounceIn">
                 <option value="0">
                     Escolha o gênero
                 </option>
             </select>
 
-            <select id="year" class="allS_animation animate__animated animate__bounceIn">
+            <select name="ano" id="year" class="allS_animation animate__animated animate__bounceIn">
                 <option value="0">
                     Escolha o ano
                 </option>
@@ -53,39 +54,9 @@
         </form>
 
         <div class="fatherContentDown">
-            <div class="squareChoice">
-                <div class="movie">
-                    <img src="img/dickJane.png" alt="" class="picture">
-                    <div class="blurred">
-                        <label for=""class="avaliacaoText">Avaliação do usuário: </label> 
-                        <label for="" class="avaliacaoValue">90%</label>
-                    </div>
-                </div>
-
-                <div class="movie">
-                    <img src="img/euIrene.png" alt="" class="picture">
-                    <div class="blurred">
-                        <label for=""class="avaliacaoText">Avaliação do usuário: </label> 
-                        <label for="" class="avaliacaoValue">90%</label>
-                    </div>
-                </div>
-
-                <div class="movie">
-                    <img src="img/theGrinch.png" alt="" class="picture">
-                    <div class="blurred">
-                        <label for=""class="avaliacaoText">Avaliação do usuário: </label> 
-                        <label for="" class="avaliacaoValue">88%</label>
-                    </div>
-                </div>
-
-                <div class="movie">
-                    <img src="img/todoPoderoso.png" alt="" class="picture">
-                    <div class="blurred">
-                        <label for=""class="avaliacaoText">Avaliação do usuário: </label> 
-                        <label for="" class="avaliacaoValue">92%</label>
-                    </div>
-                </div>
+            <div id="indication" class="squareChoice">
             </div>
+        </div>
             
         </div>
     </section>

@@ -18,3 +18,24 @@ function add() {
     return false
 }
 
+function genero() {
+    fetch("/filme/genero",{
+        method: "GET",
+    }).then(resposta => {
+        if(resposta.ok){
+            resposta.json().then(json => {
+                console.log(json)
+                for (let index = 0; index < json.length; index++) {
+                    const element = json[index];
+                    
+                    genre.innerHTML+=` <option value="${element.idGenero}">
+                                            ${element.nomeGenero}
+                                        </option>`
+                }
+            })
+        } else{
+            swal("Erro!", "Ocorreu um erro.", "error")
+    }
+    });
+    return false
+}

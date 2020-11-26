@@ -77,7 +77,7 @@ function ano() {
                 for (let index = 0; index < json.length; index++) {
                     const element = json[index];
                     
-                    year.innerHTML+=` <option value="${anoFilme}">
+                    year.innerHTML+=` <option value="${element.anoFilme}">
                                             ${element.anoFilme}
                                         </option>`
                 }
@@ -86,8 +86,36 @@ function ano() {
             swal("Erro!", "Ocorreu um erro.", "error")
     }
     });
-    return false
+    return false 
+
 }
+
+function indicacao() {
+    var formulario = new URLSearchParams(new FormData(formSelecionar));
+    fetch("/filme/indicacao",{
+        method: "POST",
+        body: formulario
+    }).then(resposta => {
+            if(resposta.ok){
+                resposta.json().then(json => {
+                    indication.innerHTML = ""
+                    for (let index = 0; index < json.length; index++) {
+                        const element = json[index];
+                        
+                        indication.innerHTML+=` <div class="movie">
+                        <img src="${element.imgFilme}" class="picture">
+                        <div class="blurred">
+                        <label for=""class="avaliacaoText">Avaliação do usuário: </label> 
+                        <label for="" class="avaliacaoValue">${element.avaliacaoFilme}%</label>
+                        </div>`
+                    }
+                })
+            } else{
+                swal("Erro!", "Ocorreu um erro.", "error")
+            }
+        });
+        return false 
+    }
 
 home()
 ator()

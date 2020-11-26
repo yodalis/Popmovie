@@ -37,7 +37,30 @@ router.post('/indicacao', function(req,res){
     var genero = req.body.genero
     var ano = req.body.ano
 
-    let instrucaoSql = `select * from Filme,atorFilme,generoFilme where Filme.idFilme = atorFilme.fkFilme and Filme.idFilme = generoFilme.fkFilme and atorFilme.fkAtor = ${ator} or generoFilme.fkGenero = ${genero} or Filme.anoFilme = ${ano}`;
+    console.log(ano);
+
+    if (ator == 0 && genero == 0 && ano != 0) {
+        var instrucaoSql = `select * from Filme where anoFilme = ${ano};`
+    } else if (ator != 0 && genero == 0 && ano == 0){
+        var instrucaoSql = `select * from Filme,atorFilme where Filme.idFilme = atorFilme.fkFilme and atorFilme.fkAtor = ${ator};`
+    } else if (ator == 0 && genero != 0 && ano == 0){
+        var instrucaoSql = `select * from Filme,generoFilme where Filme.idFilme = generoFilme.fkFilme and generoFilme.fkGenero = ${genero}; `
+    } else if (ator == 0 && genero != 0 && ano != 0){
+        var instrucaoSql = `select * from Filme, generoFilme where Filme.idFilme = generoFilme.fkFilme and generoFilme.fkGenero = ${genero} and anoFilme = ${ano};`
+    } else if (ator != 0 && genero != 0 && ano == 0){
+        var instrucaoSql = `select * from Filme, generoFilme, atorFilme where Filme.idFilme = generoFilme.fkFilme and generoFilme.fkGenero = ${genero} and Filme.idFilme = atorFilme.fkFilme and atorFilme.fkAtor = ${ator}`
+    } else if (ator != 0 && genero !=0 && ano != 0){
+        var instrucaoSql = `select * from Filme, generoFilme, atorFilme where Filme.idFilme = generoFilme.fkFilme and generoFilme.fkGenero = ${genero} and Filme.idFilme = atorFilme.fkFilme and atorFilme.fkAtor = ${ator} and anoFilme = ${ano}`
+    } else if (ator != 0 && genero == 0 && ano != 0) {
+        var instrucaoSql = `select * from Filme,atorFilme where Filme.idFilme = atorFilme.fkFilme and atorFilme.fkAtor = ${ator} and anoFilme = ${ano};`
+    }else {
+        res.json({
+            "status": "ok"
+        })
+
+        return 
+    }
+    
     sequelize.query(instrucaoSql, {
 		model: Filme
 	}).then(resultado => {
