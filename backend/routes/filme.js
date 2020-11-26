@@ -17,6 +17,7 @@ router.get('/', function (req,res){
 
 // o Post adiciona, aqui ele vai adicionar um novo filme naquela lista de filmes.
 router.post('/', function (req, res){
+    console.log(req.body)
     Filme.create({
         nomeFilme: req.body.nomeFilme,
         anoFilme: req.body.anoFilme,

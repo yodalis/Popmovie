@@ -56,10 +56,13 @@ router.post('/cadastrar', function(req, res, next) {
 
 /*Atualizando o usuário*/ 
 router.put('/configurar', function(req, res){
-	console.log(req.headers.idusuario)
-	Usuario.update(
-		req.body, 
-		{returning: true, where: {idUsuario: req.headers.idusuario}}
+	console.log(req.body)
+	Usuario.update({
+		nome : req.body.nome,
+		email : req.body.email,
+		senha: req.body.senha,
+		icone: req.body.icone
+	},{returning: true, where: {idUsuario: req.headers.idusuario}}
 	).then(resultado => {
         res.send(resultado);
     }).catch(erro => {

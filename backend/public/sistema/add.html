@@ -26,16 +26,16 @@
     </aside>
 
     <section class="general">
-        <form class="data_movie animate__animated animate__backInUp" onsubmit="validarAdd(event)">
+        <form name="form_adicionar" method="POST" class="data_movie animate__animated animate__backInUp" onsubmit="return add()">
             <div class="in">
-                <label for="title">Título do filme</label> 
-                <input id="title" type="text" required>
+                <label for="nomeFilme">Título do filme</label> 
+                <input type="text" name="nomeFilme" required>
             </div>
 
             <div class="row">
                 <div>
                     <label for="genre">Gênero</label> 
-                    <select id="genre" class="genreSelect" required> 
+                    <select name="genre" class="genreSelect" required> 
                         <option value="0">Escolha o gênero</option>
                         <option value="1">Ação</option>
                         <option value="2">Aventura</option>
@@ -53,28 +53,32 @@
                 </div>
 
                 <div class="in_year in">
-                    <label for="year">Ano</label> 
-                    <input type="number" min="1920" max="2020" step="1" value="2020" required class="in_year">
+                    <label for="anoFilme">Ano</label> 
+                    <input name="anoFilme" type="number" min="1920" max="2020" step="1" value="2020" required class="in_year">
                 </div>
             </div>
             
             <div class="in">
-                <label for="score"> Nota do filme (%) </label>
-                <input id="score" type="number" required>
+                <label for="avaliacaoFilme"> Nota do filme (%) </label>
+                <input name="avaliacaoFilme" type="number" required>
             </div>
+            
+            <input name="fkUsuario" id="fkUsuario" type="text" style="display: none;">
             
             <div class="in">
                 <label for="actor"> Atores/Atrizes</label>
-                <input id="actor" type="text" required>
+                <input name="actor" type="text" required>
             </div>
 
             
             <div class="in">
-                <label for="addPhoto"> Adicione aqui a URL da imagem do Filme </label>
-                <input id="photo"required></textarea>
+                <label for="imgFilme"> Adicione aqui a URL da imagem do Filme </label>
+                <input name="imgFilme" type="text" required></input>
             </div>
             
-            <button class="validate"> Cadastrar filme </button>
+            <button class="validate" type="submit">
+                 Cadastrar filme 
+            </button>
         </form>
 
         <div class="photo animate__animated animate__backInUp">

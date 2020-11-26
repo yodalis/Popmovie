@@ -7,9 +7,11 @@ function login() {
     }).then(resposta => {
         if(resposta.ok){
             resposta.json().then(json => {
-                // sessionStorage.login_usuario_meuapp = json.email;
-                sessionStorage.nome_usuario_meuapp = json.nome;
-
+                sessionStorage.idUsuario = json.idUsuario;
+                sessionStorage.email = json.email;
+                sessionStorage.nome = json.nome;
+                sessionStorage.icone = json.icone;
+                
                 location.href = '../sistema/index.html'
             })
         } else{
