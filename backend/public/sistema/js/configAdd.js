@@ -24,7 +24,6 @@ function genero() {
     }).then(resposta => {
         if(resposta.ok){
             resposta.json().then(json => {
-                console.log(json)
                 for (let index = 0; index < json.length; index++) {
                     const element = json[index];
                     
@@ -39,3 +38,4 @@ function genero() {
     });
     return false
 }
+genero()

@@ -109,6 +109,28 @@ router.get('/ano', function (req,res){
 		res.status(500).send(erro.message);
   	});
 });
+// Cadastro de gênero no add
+router.post('/genero', function(req, res){
+    Genero.create({
+        nomeGenero: req.body.nomeGenero
+    }).then(resultado => {
+        res.send(resultado);
+    }).catch(erro => {
+        res.status(500).send(erro.message);
+    });
+})
+
+// Cadastro de atores no add
+router.post('/ator', function(req, res){
+    Ator.create({
+        nomeAtor: req.body.nomeAtor
+    }).then(resultado => {
+        res.send(resultado);
+    }).catch(erro => {
+        res.status(500).send(erro.message);
+    });
+})
+
 
 
 
