@@ -28,67 +28,26 @@
 
     <section id="content">
         <div class="fatherContentUp">
-            <div class="squareChoiceUp">
-                <div class="movie animate__animated animate__animate__backInDown">
-                    <img src="img/aDay.jpeg" alt="A Day" class="picture">
-                    <div class="blurred">
-                        <label for=""class="avaliacaoText">Avaliação do usuário: </label> 
-                        <label for="" class="avaliacaoValue">91%</label>
-                    </div>
-                </div>
-
-                <div class="movie">
-                    <img src="img/her.jpg" alt="Her" class="picture">
-                    <div class="blurred">
-                        <label for=""class="avaliacaoText">Avaliação do usuário: </label> 
-                        <label for="" class="avaliacaoValue">86%</label>
-                    </div>
-                </div>
-
-                <div class="movie">
-                    <img src="img/interstellar.jpg" alt="Interstellar" class="picture">
-                    <div class="blurred">
-                        <label for=""class="avaliacaoText">Avaliação do usuário: </label> 
-                        <label for="" class="avaliacaoValue">95%</label>
-                    </div>
-                </div>
-
-                <div class="movie">
-                    <img src="img/mensagemVoce.jpg" alt="You've Got Mail" class="picture">
-                    <div class="blurred">
-                        <label for=""class="avaliacaoText">Avaliação do usuário: </label> 
-                        <label for="" class="avaliacaoValue">90%</label>
-                    </div>
-                </div>
-            </div>
+            <div id="movies" class="squareChoiceUp"></div>
         </div>
-        <form class="all_selects ">
-            <select id="atriz" class="allS_animation animate__animated animate__bounceIn">
-                <option value="1">
-                    Escolha ator/atriz
-                </option>
-                <option value="2">
-                    Jim Carrey
-                </option>
-            </select>
-
-            <select id="genero" class="allS_animation animate__animated animate__bounceIn">
-                <option value="3">
+        <form class="all_selects">
+            <div id="">
+                    <select id="atores" class="allS_animation animate__animated animate__bounceIn">
+                        <option value="0">
+                            Escolha ator/atriz
+                        </option>
+                    </select>
+            </div>
+                
+            <select id="genre" class="allS_animation animate__animated animate__bounceIn">
+                <option value="0">
                     Escolha o gênero
                 </option>
-
-                <option value="4">
-                    Comédia
-                </option>
             </select>
 
-            <select id="ano" class="allS_animation animate__animated animate__bounceIn">
-                <option value="5">
+            <select id="year" class="allS_animation animate__animated animate__bounceIn">
+                <option value="0">
                     Escolha o ano
-                </option>
-
-                <option value="6">
-                    2000
                 </option>
             </select>
         </form>
@@ -134,3 +93,5 @@
 </body>
 
 </html>
+
+<script src="./js/configHome.js"></script>
