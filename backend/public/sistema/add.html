@@ -26,7 +26,7 @@
     </aside>
 
     <section class="general">
-        <form name="form_adicionar" method="POST" class="data_movie animate__animated animate__backInUp" onsubmit="return add()">
+        <form name="form_adicionar" method="POST" class="data_movie animate__animated animate__backInUp" onsubmit="return add(event)">
             <div class="in">
                 <label for="nomeFilme">Título do filme</label> 
                 <input type="text" name="nomeFilme" required>
@@ -55,7 +55,7 @@
             
             <div class="in">
                 <label for="actor"> Atores/Atrizes</label>
-                <input name="actor" type="text" required>
+                <input id="atord" name="actor" type="text" required>
             </div>
 
             
@@ -75,4 +75,6 @@
     </section>
 </body>
 </html>
-<script src="js/configAdd.js"></script>
+<script src="js/configAdd.js">
+
+</script>

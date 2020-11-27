@@ -122,13 +122,23 @@ router.post('/genero', function(req, res){
 
 // Cadastro de atores no add
 router.post('/ator', function(req, res){
-    Ator.create({
-        nomeAtor: req.body.nomeAtor
-    }).then(resultado => {
-        res.send(resultado);
-    }).catch(erro => {
-        res.status(500).send(erro.message);
-    });
+   
+    var nomeAtores = req.body.atores
+    nomeAtores = JSON.parse(nomeAtores)
+    var resposta = []
+
+    const arrayAtores = nomeAtores.map((element) => {
+        return Ator.create({
+            nomeAtor: element
+        }).then(resultado => {
+            resposta.push({resultado})
+        }).catch(erro => {
+            res.status(500).send(erro.message);
+        });
+    })
+    Promise.all(arrayAtores).then(() => {
+        res.json(resposta);
+    })
 })
 
 
