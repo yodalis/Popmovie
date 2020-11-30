@@ -38,9 +38,56 @@ function cadastroFilme(jsonAtor){
 }
 
 
-function atorFilme(jsonFilme,jsonAtor) {
-    console.log("Essa é do filme", jsonFilme)
-    console.log("Essa é do ator", jsonAtor)
+function atorFilme(jsonFilme,jsonAtor){ 
+    const idFilme = jsonFilme.idFilme
+
+    for (let index = 0; index < jsonAtor.length; index++) {
+        var dados = new FormData()
+        dados.append("fkFilme", idFilme)
+        const element = jsonAtor[index];
+        
+        const idAtor = element.resultado.idAtor
+        dados.append("fkAtor", idAtor)
+        dados = new URLSearchParams(dados)
+        
+        fetch("/filme/atorFilme",{
+            method:"POST",
+            body: dados
+        }).then(resposta => {
+            if(resposta.ok){
+            generoFilme(idFilme)
+            }
+        })
+
+    }
+
+    
+
+}
+
+function generoFilme(idFilme) {
+    const idGenero = genre.value  
+    var dado = new FormData()
+    dado.append("fkFilme", idFilme)
+    dado.append("fkGenero", idGenero)
+    dado = new URLSearchParams(dado)
+
+    fetch("/filme/generoFilme",{
+        method:"POST",
+        body: dado
+    }).then(resposta => {
+        if(resposta.ok){
+            swal("Filme registrado!", "Obrigada pela sua indicação!", "success").then(function(){location.href = 'index.html'})
+        }else{
+            swal("Erro!", "Por favor indique o filme corretamente.", "error")
+
+             }
+            
+        
+    })
+
+
+
 }
 
 function genero() {
@@ -63,16 +110,12 @@ function genero() {
     });
     return false
 }
+
 genero()
 
 
 
-    // 
-    //     if(resposta.ok){
-    //         resposta.json().then(json => {
-
-    //             swal("Filme registrado!", "Obrigada pela sua indicação!", "success").then(function(){location.href = 'index.html'})
-    //         })
+   
     //     } else{
     //         swal("Erro!", "Por favor indique o filme corretamente.", "error")
     // }

@@ -26,7 +26,8 @@
     </aside>
 
     <section class="general">
-        <form name="form_adicionar" method="POST" class="data_movie animate__animated animate__backInUp" onsubmit="return add(event)">
+
+        <form name="form_adicionar" method="POST" class="data_movie animate__animated animate__backInUp" onsubmit="return add(event)">   
             <div class="in">
                 <label for="nomeFilme">Título do filme</label> 
                 <input type="text" name="nomeFilme" required>
@@ -70,11 +71,21 @@
         </form>
 
         <div class="photo animate__animated animate__backInUp">
+           
             <img src="img/girls.png" alt="Meninas vendo filme" class="girls">
         </div>
+        
     </section>
 </body>
 </html>
 <script src="js/configAdd.js">
 
+</script>
+
+<script>
+       var iconeFixo = sessionStorage.icone
+    var nomeFixo = sessionStorage.nome
+
+    nome.innerHTML = `${nomeFixo}`
+    imagemFixa.src = `img/avatar${iconeFixo}.png`
 </script>

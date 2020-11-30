@@ -28,6 +28,10 @@
 
     <section id="content">
         <div class="fatherContentUp">
+            <div id="profile" class="avatarUsuario">
+                <label id="nome"> Louise Sparks</label>
+                <img id="imagemFixa" class="photoUser" alt="">
+            </div>
             <div id="movies" class="squareChoiceUp"></div>
         </div>
         <form id="formSelecionar" class="all_selects" method="POST"  onchange="return indicacao()">
@@ -40,7 +44,7 @@
 
             </div>
                 
-            <select name="genero" id="genre" class="allS_animation animate__animated animate__bounceIn">
+            <select name="genero" id="genreone" class="allS_animation animate__animated animate__bounceIn">
                 <option value="0">
                     Escolha o gênero
                 </option>
@@ -66,3 +70,23 @@
 </html>
 
 <script src="./js/configHome.js"></script>
+
+<script>
+    var iconeFixo = sessionStorage.icone
+    var nomeFixo = sessionStorage.nome
+
+    nome.innerHTML = `${nomeFixo}`
+    imagemFixa.src = `img/avatar${iconeFixo}.png`
+
+    document.querySelector("#movies").addEventListener("wheel",function (event) {
+        if (event.deltaY>0) {
+            event.target.scrollBy(300,0)
+            
+        } else{
+            event.target.scrollBy(-300,0)
+        }
+    })
+    setInterval(function () {
+        movies.scrollBy(300,0)
+    },3000)
+</script>

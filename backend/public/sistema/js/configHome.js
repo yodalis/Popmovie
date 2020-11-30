@@ -4,7 +4,7 @@ function home() {
     }).then(resposta => {
         if(resposta.ok){
             resposta.json().then(json => {
-                console.log(json)
+                movies.innerHTML=""
                 for (let index = 0; index < json.length; index++) {
                     const element = json[index];
                     movies.innerHTML+=` <div class="movie">
@@ -22,6 +22,8 @@ function home() {
     });
     return false
 }
+
+// setInterval(home,10000)
 
 function ator() {
     fetch("/filme/ator",{
@@ -55,7 +57,7 @@ function genero() {
                 for (let index = 0; index < json.length; index++) {
                     const element = json[index];
                     
-                    genre.innerHTML+=` <option value="${element.idGenero}">
+                    genreone.innerHTML+=` <option value="${element.idGenero}">
                                             ${element.nomeGenero}
                                         </option>`
                 }

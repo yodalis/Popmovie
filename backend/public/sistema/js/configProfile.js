@@ -3,6 +3,7 @@ input_nome.value = sessionStorage.nome
 input_email.value = sessionStorage.email
 imagemPerfil.src = `img/avatar${sessionStorage.icone}.png`
 nomeG.innerHTML = sessionStorage.nome
+var icone = sessionStorage.icone
 function profile(event) {
     event.preventDefault()
     if(input_senha.value == input_Csenha.value){
@@ -10,7 +11,11 @@ function profile(event) {
         var myHeaders = new Headers();
         myHeaders.append("idUsuario", sessionStorage.idUsuario);
         console.log(sessionStorage.idUsuario)
-        var formulario = new URLSearchParams(new FormData(form_profile));
+
+        var dados = new FormData(form_profile)
+        dados.append("icone", icone)
+
+        var formulario = new URLSearchParams(dados);
         console.log(formulario.toString())
         fetch("/usuarios/configurar",{
             method: "PUT",
@@ -24,6 +29,7 @@ function profile(event) {
                 
                 sessionStorage.nome = dadosFinal.nome
                 sessionStorage.email = dadosFinal.email
+                sessionStorage.icone = dadosFinal.icone
                 swal("Dados atualizados!", "", "success").then(function (){location.href = `profile.html`})
                 
             })
@@ -35,6 +41,11 @@ function profile(event) {
 } else{
     swal("Erro!", "As senhas precisam ser iguais!", "error")
 }
+}
+
+function alterarFoto(nomeFoto) {
+    icone = nomeFoto
+    imagemPerfil.src = `img/avatar${nomeFoto}.png`
 }
 
 

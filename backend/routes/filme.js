@@ -1,6 +1,8 @@
 var express = require('express');
 const Ator = require('../models').Ator
 const Genero = require('../models').Genero
+const GeneroFilme = require('../models').GeneroFilme
+const AtorFilme = require('../models').AtorFilme
 var router = express.Router();
 var sequelize = require('../models').sequelize;
 var Filme = require('../models').Filme
@@ -124,6 +126,7 @@ router.post('/genero', function(req, res){
 router.post('/ator', function(req, res){
    
     var nomeAtores = req.body.atores
+    console.log(nomeAtores)
     nomeAtores = JSON.parse(nomeAtores)
     var resposta = []
 
@@ -141,8 +144,28 @@ router.post('/ator', function(req, res){
     })
 })
 
+// Criação de generoFilme
+router.post('/generoFilme', function(req, res){
+    GeneroFilme.create({
+        fkFilme: req.body.fkFilme,
+        fkGenero: req.body.fkGenero
+    }).then(resultado => {
+        res.send(resultado);
+    }).catch(erro => {
+        res.status(500).send(erro.message);
+    });
+})
 
-
+// Criação de atorFilme
+router.post('/atorFilme', function(req, res){
+    AtorFilme.create({
+        fkAtor: req.body.fkAtor,
+        fkFilme: req.body.fkFilme
+    }).then(resultado => {
+        res.send(resultado);
+    }).catch(erro => {
+        res.status(500).send(erro.message);
+    });
+})
 
 module.exports = router;
-
