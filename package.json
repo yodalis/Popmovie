@@ -1,0 +1,9 @@
+{
+  "name": "popmovie",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./backend/bin/www",
+	"postinstall": "cd backend && npm install"
+  }
+}
