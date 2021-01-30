@@ -4,7 +4,6 @@
     outline: 0;
     box-sizing: border-box;
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    transition-timing-function: ease-out;
 }
 
 body{
@@ -60,6 +59,7 @@ body{
     font-size: 18px;
     font-weight: normal;
     display: flex;
+    font-weight: 500;
 }
 
 .in input {
@@ -96,5 +96,7 @@ body{
     border-radius: 5px;
     border-style: solid;
     border-color: #73677e;
+    text-transform: uppercase;
+    font-weight: 500;
 
 }

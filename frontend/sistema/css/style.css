@@ -218,7 +218,13 @@ body{
     animation-duration: 0.7s;
     animation-delay: 0s;
 }
-
+.in{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
 .in input{
     height: 35px;
     width: 300px;
@@ -237,11 +243,15 @@ body{
     
 }
 
+#score{
+    height: 35px;
+    width: 150px;
+}
 .genreSelect{
     height: 35px;
     display: flex;
     justify-content: center; 
-    margin: 5px 0px 0px 0px;
+    margin: 5px 12px 0px -5px;
     background-color: #232323;
     color: white;
     font-size: 15px;
@@ -316,6 +326,9 @@ body{
     justify-content: center;
     align-items: center;
     padding: 0;
+    animation: backInUp ease-in-out;
+    animation-duration: 0.7s;
+    animation-delay: 0s;
 }
 
 .girls{
@@ -368,8 +381,6 @@ body{
 }
 .sizePhoto{
     height: 85px;
-    border: #ea0000 solid 5px;
-    border-radius: 52px;
     cursor: pointer;
 }
 
@@ -398,11 +409,13 @@ body{
     color: white;
     border-radius: 7px;
     border: #64E8F0 3px solid;
+    margin-top: 7px;
 }
 
 .inModify label{
     color: white;
     font-size: 18px;
+    
     }
 
 .modifyButton{
@@ -418,4 +431,7 @@ body{
                       linear-gradient(to right, #64E8F0, #FF4034);
     background-origin: border-box;
     background-clip: content-box, border-box;
+    font-size:12px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
