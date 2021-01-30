@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de login</title>
+    <link rel="stylesheet" href="css/styleLogin.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+<body>
+    <section class="div_geral">  
+        <div class="div_imagem">
+            <img class="homem_filme" src="img/movie_man.png" alt="Imagem homem assistindo filme">
+        </div>
+
+        <div class="lado_direito">
+            <div class="centro">
+                <div class="logo_imagem">
+                     <img class="pipoca" src="img/logo_sn.png" alt="Logo">
+                </div>
+                
+                <form id="form_login" method="POST" class="div_inputs" onsubmit="return login()">
+                    <div class="input_self">
+                        <label for="input_email">E-mail</label> 
+                        <input id="input_email" type="email" placeholder="Digite aqui seu email" name="email" required>
+                    </div>
+                    
+                    <div class="input_self">
+                        <label for="input_senha">
+                        Senha
+                        </label>
+                        <input id="input_senha" type="password" placeholder="Digite aqui sua senha" name="senha" required>
+                    </div>
+
+                    <div class="div_botao"> 
+                        <button type="button" onclick="location.href = 'cadastro.html'" >
+                            CADASTRE-SE
+                        </button>
+
+                        <button type="submit">
+                            ENTRAR
+                        </button>
+                    </div>
+
+                    <div class="message" onclick="popup(event)">
+                        
+                           Você já esqueceu a sua senha né?
+                           <br> 
+                           <a href=""> <b>
+                            Então clica aqui!
+                           </b></a>  
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+
+<script src="js/configLogin.js"></script>

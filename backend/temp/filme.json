@@ -1,0 +1,20 @@
+[{
+        "idFilme": 1,
+        "nomeFilme": "Meninas Malvadas",
+        "anoFilme": 2004,
+        "fkUsuario": 1,
+        "sinopseFilme": "A adolescente Cady Heron (Lindsay Lohan) foi educada na África pelos seus pais cientistas. Quando sua família se muda para os subúrbios de Illinois, Cady finalmente vai para escola pública e recebe uma rápida introdução às leis tácitas de popularidade que dividem seus colegas. Sem querer, ela encontra-se no meio de um grupo de elite de estudantes apelidadas de As Poderosas, mas Cady logo aprende porque o seu novo grupo de amigos ganhou este apelido",
+        "imgFilme": "encurtador.com.br/xGQ24",
+        "avaliacaoFilme": 83
+    },
+
+    {
+        "idFilme": 2,
+        "nomeFilme": "Kill Bill: Volume 1",
+        "anoFilme": 2004,
+        "fkUsuario": 2,
+        "sinopseFilme": "No dia de seu casamento, a Noiva (Uma Thurman), uma perigosa assassina profissional, é espancada pelos membros do grupo de extermínio de que fazia parte. Bill, o chefe do grupo, atira em sua cabeça, o que a coloca em coma por quatro anos. Ao despertar, ela tem único desejo: vingança.",
+        "imgFilme": "encurtador.com.br/juAR8",
+        "avaliacaoFilme": 93
+    }
+]

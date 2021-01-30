@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-color: white;
+    color: black;
+    font-size: 25px;
+}
+
+.generalFront{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    background-color: #EDECEC;
+    margin: 0;
+}
+
+
+.registerPhoto{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftSide{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popcornGlass{
+    height: 300px;
+}
+
+.data_register{
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.in{
+    display: flex;
+    flex-direction: column;
+}
+
+.in label {
+    color: #242424;
+    font-size: 18px;
+    font-weight: normal;
+    display: flex;
+    font-weight: 500;
+}
+
+.in input {
+    height: 30px;
+    width: 300px;
+    border-radius: 8px;
+    border-color: #dddddd;
+    border-style: solid;
+    background-color: #ffffff;
+}
+
+.arrow{
+    height: 50px;
+}
+
+.arrowOnly{
+    height: 50px;
+    width: 50px;
+}
+
+.div_botao{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.div_botao button{
+    
+    height: 30px;
+    width: 150px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #4F4E63;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #73677e;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+}

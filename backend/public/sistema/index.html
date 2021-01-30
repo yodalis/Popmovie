@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+
+<body>
+    <aside id="menuVertical">
+        <div class="vertical_menu">
+            <div class="part_one">
+                <a href="index.html"><img src="img/logo.png" alt="Logo" class="icone_pipoca"></a>
+                <a href="index.html"><img src="img/icon home.png" alt="Home" class="icones"></a>
+                <a href="add.html"><img src="img/icon add.png" alt="Add filme" class="icones"></a>
+            </div>
+            <div class="part_two">
+                <a href="profile.html"><img src="img/Profile.png" alt="Configurações" class="icones"></a>
+                <a href="../index.html"><img src="img/Icone log out.png" alt="Sair" class="icones"></a>
+            </div>
+        </div>
+    </aside>
+
+    <section id="content">
+        <div class="fatherContentUp">
+            <div id="profile" class="avatarUsuario">
+                <label id="nome"> Louise Sparks</label>
+                <img id="imagemFixa" class="photoUser" alt="">
+            </div>
+            <div id="movies" class="squareChoiceUp"></div>
+        </div>
+        <form id="formSelecionar" class="all_selects" method="POST"  onchange="return indicacao()">
+            <div id="">
+                    <select name="ator" id="atores" class="allS_animation animate__animated animate__bounceIn">
+                        <option value="0">
+                            Escolha ator/atriz
+                        </option>
+                    </select>
+
+            </div>
+                
+            <select name="genero" id="genreone" class="allS_animation animate__animated animate__bounceIn">
+                <option value="0">
+                    Escolha o gênero
+                </option>
+            </select>
+
+            <select name="ano" id="year" class="allS_animation animate__animated animate__bounceIn">
+                <option value="0">
+                    Escolha o ano
+                </option>
+            </select>
+        </form>
+
+        <div class="fatherContentDown">
+            <div id="indication" class="squareChoice">
+            </div>
+        </div>
+            
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+<script src="./js/configHome.js"></script>
+
+<script>
+    var iconeFixo = sessionStorage.icone
+    var nomeFixo = sessionStorage.nome
+
+    nome.innerHTML = `${nomeFixo}`
+    imagemFixa.src = `img/avatar${iconeFixo}.png`
+
+    document.querySelector("#movies").addEventListener("wheel",function (event) {
+        if (event.deltaY>0) {
+            event.target.scrollBy(300,0)
+            
+        } else{
+            event.target.scrollBy(-300,0)
+        }
+    })
+    setInterval(function () {
+        movies.scrollBy(300,0)
+    },3000)
+</script>
